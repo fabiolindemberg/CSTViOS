@@ -192,3 +192,7 @@ var matchMock: Match {
 var matchesMock: [Match] {
     [matchMock, matchMock]
 }
+
+var opponentPlayersMock: OpponentPlayers {
+    OpponentPlayers(playerTeamOne: Player(id: 1, name: "Nickname", firstName: "Nome", lastName: "Jogador", imageUrl: "https://cdn.pandascore.co/images/player/image/25348/600px_mali_cowana_gaming.png"), playerTeamTwo: Player(id: 2, name: "Nickname", firstName: "Nome", lastName: "Jogador", imageUrl: "https://cdn.pandascore.co/images/player/image/27785/ele_kz_at_fantasy_basel_2019.png"))
+}
