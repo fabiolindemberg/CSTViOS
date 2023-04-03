@@ -28,6 +28,8 @@
 		499A46E229DB040500C5EC70 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E129DB040500C5EC70 /* Extensions.swift */; };
 		499A46E529DB04D500C5EC70 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E429DB04D500C5EC70 /* SplashScreenView.swift */; };
 		499A46E729DB060500C5EC70 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E629DB060500C5EC70 /* Mocks.swift */; };
+		499A46EA29DB066E00C5EC70 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E929DB066E00C5EC70 /* MatchViewModel.swift */; };
+		499A46EC29DB069000C5EC70 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		499A46E129DB040500C5EC70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		499A46E429DB04D500C5EC70 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		499A46E629DB060500C5EC70 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		499A46E929DB066E00C5EC70 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+		499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		499A468529DA757600C5EC70 /* CSTViOS */ = {
 			isa = PBXGroup;
 			children = (
+				499A46E829DB065200C5EC70 /* ViewModel */,
 				499A46E329DB04B700C5EC70 /* View */,
 				499A46DE29DB039200C5EC70 /* Common */,
 				499A46D729DB030000C5EC70 /* Service */,
@@ -199,6 +204,15 @@
 				499A46E429DB04D500C5EC70 /* SplashScreenView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		499A46E829DB065200C5EC70 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				499A46E929DB066E00C5EC70 /* MatchViewModel.swift */,
+				499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +353,9 @@
 				499A46D229DB020400C5EC70 /* Opponent.swift in Sources */,
 				499A46D429DB024300C5EC70 /* OpponentPlayers.swift in Sources */,
 				499A46DD29DB036C00C5EC70 /* Service.swift in Sources */,
+				499A46EC29DB069000C5EC70 /* ViewModelProtocol.swift in Sources */,
 				499A46CA29DB017B00C5EC70 /* Player.swift in Sources */,
+				499A46EA29DB066E00C5EC70 /* MatchViewModel.swift in Sources */,
 				499A46E029DB03A000C5EC70 /* Constants.swift in Sources */,
 				499A46CC29DB01AA00C5EC70 /* Serie.swift in Sources */,
 				499A46DB29DB035200C5EC70 /* ServiceError.swift in Sources */,
