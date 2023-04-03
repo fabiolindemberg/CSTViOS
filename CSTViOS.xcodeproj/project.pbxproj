@@ -32,6 +32,7 @@
 		499A46EC29DB069000C5EC70 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */; };
 		499A46EE29DB079200C5EC70 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46ED29DB079200C5EC70 /* TeamView.swift */; };
 		499A46F029DB081B00C5EC70 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EF29DB081B00C5EC70 /* MatchView.swift */; };
+		499A46F229DB08AA00C5EC70 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F129DB08AA00C5EC70 /* MatchListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		499A46ED29DB079200C5EC70 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		499A46EF29DB081B00C5EC70 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		499A46F129DB08AA00C5EC70 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				499A46E429DB04D500C5EC70 /* SplashScreenView.swift */,
 				499A46ED29DB079200C5EC70 /* TeamView.swift */,
 				499A46EF29DB081B00C5EC70 /* MatchView.swift */,
+				499A46F129DB08AA00C5EC70 /* MatchListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				499A46CA29DB017B00C5EC70 /* Player.swift in Sources */,
 				499A46EA29DB066E00C5EC70 /* MatchViewModel.swift in Sources */,
 				499A46E029DB03A000C5EC70 /* Constants.swift in Sources */,
+				499A46F229DB08AA00C5EC70 /* MatchListView.swift in Sources */,
 				499A46CC29DB01AA00C5EC70 /* Serie.swift in Sources */,
 				499A46EE29DB079200C5EC70 /* TeamView.swift in Sources */,
 				499A46DB29DB035200C5EC70 /* ServiceError.swift in Sources */,
