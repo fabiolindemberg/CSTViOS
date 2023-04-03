@@ -57,6 +57,7 @@
 		499A471129DB103500C5EC70 /* OpponentPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46D329DB024300C5EC70 /* OpponentPlayers.swift */; };
 		499A471229DB105800C5EC70 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46CB29DB01AA00C5EC70 /* Serie.swift */; };
 		499A471329DB107300C5EC70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46DF29DB03A000C5EC70 /* Constants.swift */; };
+		499A471529DB110E00C5EC70 /* CSTVMatchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A471429DB110E00C5EC70 /* CSTVMatchViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		499A46FF29DB0E4900C5EC70 /* JSONDecoder+customDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+customDecoder.swift"; sourceTree = "<group>"; };
 		499A470229DB0EBA00C5EC70 /* Data+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+decode.swift"; sourceTree = "<group>"; };
 		499A470529DB0F1200C5EC70 /* Date+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+utils.swift"; sourceTree = "<group>"; };
+		499A471429DB110E00C5EC70 /* CSTVMatchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVMatchViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				499A46F929DB0DA200C5EC70 /* CSTVPlayersViewModelTests.swift */,
+				499A471429DB110E00C5EC70 /* CSTVMatchViewModelTests.swift */,
 			);
 			path = CSTViOSTests;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				499A470129DB0E4C00C5EC70 /* JSONDecoder+customDecoder.swift in Sources */,
 				499A470D29DB102600C5EC70 /* Service.swift in Sources */,
 				499A46FB29DB0DD600C5EC70 /* PlayersViewModel.swift in Sources */,
+				499A471529DB110E00C5EC70 /* CSTVMatchViewModelTests.swift in Sources */,
 				499A470929DB100F00C5EC70 /* MatchViewModel.swift in Sources */,
 				499A470B29DB102100C5EC70 /* ServiceProtocol.swift in Sources */,
 				499A471129DB103500C5EC70 /* OpponentPlayers.swift in Sources */,
