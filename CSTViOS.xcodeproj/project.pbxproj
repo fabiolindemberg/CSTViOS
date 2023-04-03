@@ -30,6 +30,7 @@
 		499A46E729DB060500C5EC70 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E629DB060500C5EC70 /* Mocks.swift */; };
 		499A46EA29DB066E00C5EC70 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E929DB066E00C5EC70 /* MatchViewModel.swift */; };
 		499A46EC29DB069000C5EC70 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */; };
+		499A46EE29DB079200C5EC70 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46ED29DB079200C5EC70 /* TeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		499A46E629DB060500C5EC70 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		499A46E929DB066E00C5EC70 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		499A46ED29DB079200C5EC70 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				499A46E429DB04D500C5EC70 /* SplashScreenView.swift */,
+				499A46ED29DB079200C5EC70 /* TeamView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				499A46EA29DB066E00C5EC70 /* MatchViewModel.swift in Sources */,
 				499A46E029DB03A000C5EC70 /* Constants.swift in Sources */,
 				499A46CC29DB01AA00C5EC70 /* Serie.swift in Sources */,
+				499A46EE29DB079200C5EC70 /* TeamView.swift in Sources */,
 				499A46DB29DB035200C5EC70 /* ServiceError.swift in Sources */,
 				499A46CE29DB01C400C5EC70 /* League.swift in Sources */,
 				499A468729DA757600C5EC70 /* CSTViOSApp.swift in Sources */,
