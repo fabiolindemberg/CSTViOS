@@ -55,7 +55,7 @@ class Service: ServiceProtocol {
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = Constants.API.headers
         request.url?.append(queryItems: [
-            .init(name: "range[begin_at]", value: "\(Data.todayString),\(Data.tomorrowString)"),
+            .init(name: "range[begin_at]", value: "\(Date.todayString),\(Date.tomorrowString)"),
             .init(name: "filter[status]", value: "running,finished"),
             .init(name: "sort", value: "-status,begin_at"),
         ])
