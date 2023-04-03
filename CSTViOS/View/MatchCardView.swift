@@ -36,7 +36,7 @@ struct MatchCardView: View {
                 TeamView(team: match.teamTwo)
                     .padding(.leading, 24)
             }
-            .padding(.all, 24)
+            .padding(.all, 14)
             
             Divider()
                 .background(Color.white.opacity(0.5))
