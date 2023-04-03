@@ -14,7 +14,7 @@ struct MatchListView: View {
         VStack {
             if !viewModel.loading {
                 List($viewModel.matches) { $match in
-                    MatchView(match: $match)
+                    MatchCardView(match: $match)
                     .listRowBackground(Color("primary-background"))
                     .listRowSeparator(.hidden)
                 }

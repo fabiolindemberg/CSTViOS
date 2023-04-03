@@ -31,7 +31,7 @@
 		499A46EA29DB066E00C5EC70 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E929DB066E00C5EC70 /* MatchViewModel.swift */; };
 		499A46EC29DB069000C5EC70 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */; };
 		499A46EE29DB079200C5EC70 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46ED29DB079200C5EC70 /* TeamView.swift */; };
-		499A46F029DB081B00C5EC70 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EF29DB081B00C5EC70 /* MatchView.swift */; };
+		499A46F029DB081B00C5EC70 /* MatchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EF29DB081B00C5EC70 /* MatchCardView.swift */; };
 		499A46F229DB08AA00C5EC70 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F129DB08AA00C5EC70 /* MatchListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +80,7 @@
 		499A46E929DB066E00C5EC70 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		499A46ED29DB079200C5EC70 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
-		499A46EF29DB081B00C5EC70 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		499A46EF29DB081B00C5EC70 /* MatchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCardView.swift; sourceTree = "<group>"; };
 		499A46F129DB08AA00C5EC70 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,7 +209,7 @@
 			children = (
 				499A46E429DB04D500C5EC70 /* SplashScreenView.swift */,
 				499A46ED29DB079200C5EC70 /* TeamView.swift */,
-				499A46EF29DB081B00C5EC70 /* MatchView.swift */,
+				499A46EF29DB081B00C5EC70 /* MatchCardView.swift */,
 				499A46F129DB08AA00C5EC70 /* MatchListView.swift */,
 			);
 			path = View;
@@ -360,7 +360,7 @@
 				499A46E729DB060500C5EC70 /* Mocks.swift in Sources */,
 				499A46D629DB028500C5EC70 /* Match.swift in Sources */,
 				499A46D229DB020400C5EC70 /* Opponent.swift in Sources */,
-				499A46F029DB081B00C5EC70 /* MatchView.swift in Sources */,
+				499A46F029DB081B00C5EC70 /* MatchCardView.swift in Sources */,
 				499A46D429DB024300C5EC70 /* OpponentPlayers.swift in Sources */,
 				499A46DD29DB036C00C5EC70 /* Service.swift in Sources */,
 				499A46EC29DB069000C5EC70 /* ViewModelProtocol.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  MatchView.swift
+//  MatchCardView.swift
 //  CSTViOS
 //
 //  Created by Fabio Lindemberg on 03/04/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MatchView: View {
+struct MatchCardView: View {
     @Binding var match: Match
     var onClick: (()->())?
     
@@ -68,8 +68,8 @@ struct MatchView: View {
     }
 }
 
-struct MatchView_Previews: PreviewProvider {
+struct MatchCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchView(match: .constant(matchMock))
+        MatchCardView(match: .constant(matchMock))
     }
 }
