@@ -64,7 +64,6 @@ import Foundation
         }
     }
     
-    
     func select(match: Match) {
         if self.playersViewModel == nil {
             self.playersViewModel = PlayersViewModel(service: Service(), match: match)
