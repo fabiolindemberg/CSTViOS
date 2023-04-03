@@ -27,7 +27,7 @@ struct MatchListView: View {
                     .onAppear {
                         if viewModel.isTheLast(match: match) {
                             Task {
-                                await viewModel.loadMore()
+                                await viewModel.loadMoreMatches()
                             }
                         }
                     }
@@ -36,7 +36,7 @@ struct MatchListView: View {
                 .scrollContentBackground (.hidden)
                 .background(Color("primary-background"))
                 
-                if viewModel.loadingMore {
+                if viewModel.loadingMoreMatches {
                     ProgressView()
                         .scaleEffect(1.4125)
                         .progressViewStyle(CircularProgressViewStyle(tint: .white))
@@ -58,10 +58,10 @@ struct MatchListView: View {
         .navigationTitle(Constants.Views.matchesTitle)
         .navigationBarTitleDisplayMode(.large)
         .task {
-            await viewModel.fetch()
+            await viewModel.initialLoadMatches()
         }
         .refreshable {
-            await viewModel.fetch()
+            await viewModel.initialLoadMatches()
         }
     }
 }

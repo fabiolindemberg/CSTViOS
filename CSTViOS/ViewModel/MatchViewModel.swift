@@ -17,7 +17,7 @@ import Foundation
     var loadingFirstPage: Bool {
         loading && page == 1
     }
-    var loadingMore: Bool {
+    var loadingMoreMatches: Bool {
         loading && page > 1
     }
     @Published var matches: [Match] = []
@@ -34,7 +34,7 @@ import Foundation
         self.service = service
     }
     
-    func loadMore() async {
+    func loadMoreMatches() async {
         guard !pagesHasEnded else {
             return
         }
@@ -66,7 +66,7 @@ import Foundation
         }
     }
     
-    func fetch() async {
+    func initialLoadMatches() async {
         guard !showDetailView else {
             return
         }
@@ -85,7 +85,7 @@ import Foundation
             switch todaysMatchesResult {
             case .success(let todaysMatches):
                 matches = todaysMatches
-                await loadMore()
+                await loadMoreMatches()
                 errorInfo = nil
                 break
             case .failure(let error):

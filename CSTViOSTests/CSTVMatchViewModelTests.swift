@@ -14,7 +14,7 @@ final class CSTVMatchViewModelTests: XCTestCase {
     @MainActor override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         viewModel = MatchViewModel(service: ServiceMockSuccess())
-        
+
         if let data = mockJson.data(using: .utf8) {
             matches = try? JSONDecoder().customDecoder.decode([Match].self, from: data)
         }
@@ -25,8 +25,14 @@ final class CSTVMatchViewModelTests: XCTestCase {
         viewModel = nil
     }
 
-    @MainActor func testFetchMatches() async throws {
-        await viewModel?.fetch()
+    @MainActor func testInitialLoadMatches() async throws {
+        await viewModel?.initialLoadMatches()
+        XCTAssertEqual(viewModel?.matches.count ?? 0, 1, accuracy: 1)
+    }
+
+    @MainActor func testLoadMoreMatches() async throws {
+        await viewModel?.initialLoadMatches()
+        await viewModel?.loadMoreMatches()
         XCTAssertEqual(viewModel?.matches.count ?? 0, 1, accuracy: 1)
     }
 
@@ -40,7 +46,14 @@ final class CSTVMatchViewModelTests: XCTestCase {
 
         XCTAssertNotNil(viewModel?.playersViewModel)
         XCTAssertNotNil(viewModel?.playersViewModel?.match)
+        XCTAssertTrue(viewModel?.showDetailView ?? false)
         XCTAssertEqual(viewModel?.playersViewModel?.match.id, match.id)
+    }
+    
+    @MainActor func testIsTheLastPage() throws {
+        if let match = viewModel?.matches.last {
+            XCTAssertTrue(viewModel?.isTheLast(match: match) ?? false)
+        }
     }
 
     func testPerformanceExample() throws {
