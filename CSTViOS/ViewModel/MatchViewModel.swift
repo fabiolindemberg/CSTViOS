@@ -27,12 +27,16 @@ import Foundation
     }
     
     func fetch() async {
-        fetchTask?.cancel()
+        guard !showDetailView else {
+            return
+        }
         
         guard let service = service else {
             return
         }
         
+        fetchTask?.cancel()
+
         fetchTask = Task {
             self.loading = true
             
