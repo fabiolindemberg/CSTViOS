@@ -21,6 +21,11 @@
 		499A46D229DB020400C5EC70 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46D129DB020400C5EC70 /* Opponent.swift */; };
 		499A46D429DB024300C5EC70 /* OpponentPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46D329DB024300C5EC70 /* OpponentPlayers.swift */; };
 		499A46D629DB028500C5EC70 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46D529DB028500C5EC70 /* Match.swift */; };
+		499A46D929DB032C00C5EC70 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46D829DB032C00C5EC70 /* ServiceProtocol.swift */; };
+		499A46DB29DB035200C5EC70 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46DA29DB035200C5EC70 /* ServiceError.swift */; };
+		499A46DD29DB036C00C5EC70 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46DC29DB036C00C5EC70 /* Service.swift */; };
+		499A46E029DB03A000C5EC70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46DF29DB03A000C5EC70 /* Constants.swift */; };
+		499A46E229DB040500C5EC70 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E129DB040500C5EC70 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		499A46D129DB020400C5EC70 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		499A46D329DB024300C5EC70 /* OpponentPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentPlayers.swift; sourceTree = "<group>"; };
 		499A46D529DB028500C5EC70 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		499A46D829DB032C00C5EC70 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		499A46DA29DB035200C5EC70 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		499A46DC29DB036C00C5EC70 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		499A46DF29DB03A000C5EC70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		499A46E129DB040500C5EC70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,8 @@
 		499A468529DA757600C5EC70 /* CSTViOS */ = {
 			isa = PBXGroup;
 			children = (
+				499A46DE29DB039200C5EC70 /* Common */,
+				499A46D729DB030000C5EC70 /* Service */,
 				499A46C829DB013C00C5EC70 /* Model */,
 				499A468629DA757600C5EC70 /* CSTViOSApp.swift */,
 				499A468829DA757600C5EC70 /* ContentView.swift */,
@@ -154,6 +166,25 @@
 				499A46D529DB028500C5EC70 /* Match.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		499A46D729DB030000C5EC70 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				499A46D829DB032C00C5EC70 /* ServiceProtocol.swift */,
+				499A46DA29DB035200C5EC70 /* ServiceError.swift */,
+				499A46DC29DB036C00C5EC70 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		499A46DE29DB039200C5EC70 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				499A46DF29DB03A000C5EC70 /* Constants.swift */,
+				499A46E129DB040500C5EC70 /* Extensions.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +322,15 @@
 				499A46D629DB028500C5EC70 /* Match.swift in Sources */,
 				499A46D229DB020400C5EC70 /* Opponent.swift in Sources */,
 				499A46D429DB024300C5EC70 /* OpponentPlayers.swift in Sources */,
+				499A46DD29DB036C00C5EC70 /* Service.swift in Sources */,
 				499A46CA29DB017B00C5EC70 /* Player.swift in Sources */,
+				499A46E029DB03A000C5EC70 /* Constants.swift in Sources */,
 				499A46CC29DB01AA00C5EC70 /* Serie.swift in Sources */,
+				499A46DB29DB035200C5EC70 /* ServiceError.swift in Sources */,
 				499A46CE29DB01C400C5EC70 /* League.swift in Sources */,
 				499A468729DA757600C5EC70 /* CSTViOSApp.swift in Sources */,
+				499A46D929DB032C00C5EC70 /* ServiceProtocol.swift in Sources */,
+				499A46E229DB040500C5EC70 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
