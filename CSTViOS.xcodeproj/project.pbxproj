@@ -27,6 +27,7 @@
 		499A46E029DB03A000C5EC70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46DF29DB03A000C5EC70 /* Constants.swift */; };
 		499A46E229DB040500C5EC70 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E129DB040500C5EC70 /* Extensions.swift */; };
 		499A46E529DB04D500C5EC70 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E429DB04D500C5EC70 /* SplashScreenView.swift */; };
+		499A46E729DB060500C5EC70 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46E629DB060500C5EC70 /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		499A46DF29DB03A000C5EC70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		499A46E129DB040500C5EC70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		499A46E429DB04D500C5EC70 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		499A46E629DB060500C5EC70 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				499A46DF29DB03A000C5EC70 /* Constants.swift */,
 				499A46E129DB040500C5EC70 /* Extensions.swift */,
+				499A46E629DB060500C5EC70 /* Mocks.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				499A46D029DB01E300C5EC70 /* Team.swift in Sources */,
 				499A468929DA757600C5EC70 /* ContentView.swift in Sources */,
 				499A46E529DB04D500C5EC70 /* SplashScreenView.swift in Sources */,
+				499A46E729DB060500C5EC70 /* Mocks.swift in Sources */,
 				499A46D629DB028500C5EC70 /* Match.swift in Sources */,
 				499A46D229DB020400C5EC70 /* Opponent.swift in Sources */,
 				499A46D429DB024300C5EC70 /* OpponentPlayers.swift in Sources */,
