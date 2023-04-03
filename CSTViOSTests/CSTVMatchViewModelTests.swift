@@ -31,8 +31,6 @@ final class CSTVMatchViewModelTests: XCTestCase {
     }
 
     @MainActor func testSelectMatch() async throws {
-        
-        
         guard let match = matches?.first else {
             XCTFail("A match is expected but nil was found")
             return

@@ -170,7 +170,6 @@
 				499A46D729DB030000C5EC70 /* Service */,
 				499A46C829DB013C00C5EC70 /* Model */,
 				499A468629DA757600C5EC70 /* CSTViOSApp.swift */,
-				499A468829DA757600C5EC70 /* ContentView.swift */,
 				499A468A29DA757700C5EC70 /* Assets.xcassets */,
 				499A468C29DA757700C5EC70 /* Preview Content */,
 			);
@@ -220,9 +219,9 @@
 		499A46D729DB030000C5EC70 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				499A46D829DB032C00C5EC70 /* ServiceProtocol.swift */,
-				499A46DA29DB035200C5EC70 /* ServiceError.swift */,
 				499A46DC29DB036C00C5EC70 /* Service.swift */,
+				499A46DA29DB035200C5EC70 /* ServiceError.swift */,
+				499A46D829DB032C00C5EC70 /* ServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -231,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				499A46DF29DB03A000C5EC70 /* Constants.swift */,
-				499A46E629DB060500C5EC70 /* Mocks.swift */,
 				499A470829DB0FA300C5EC70 /* Extensions */,
+				499A46E629DB060500C5EC70 /* Mocks.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -240,12 +239,13 @@
 		499A46E329DB04B700C5EC70 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				499A468829DA757600C5EC70 /* ContentView.swift */,
+				499A46EF29DB081B00C5EC70 /* MatchCardView.swift */,
+				499A46F729DB0BFB00C5EC70 /* MatchDetailView.swift */,
+				499A46F129DB08AA00C5EC70 /* MatchListView.swift */,
+				499A46F529DB0B2600C5EC70 /* OpponentPlayersView.swift */,
 				499A46E429DB04D500C5EC70 /* SplashScreenView.swift */,
 				499A46ED29DB079200C5EC70 /* TeamView.swift */,
-				499A46EF29DB081B00C5EC70 /* MatchCardView.swift */,
-				499A46F129DB08AA00C5EC70 /* MatchListView.swift */,
-				499A46F729DB0BFB00C5EC70 /* MatchDetailView.swift */,
-				499A46F529DB0B2600C5EC70 /* OpponentPlayersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,8 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				499A46E929DB066E00C5EC70 /* MatchViewModel.swift */,
-				499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */,
 				499A46F329DB0AEF00C5EC70 /* PlayersViewModel.swift */,
+				499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
