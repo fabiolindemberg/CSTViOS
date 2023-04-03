@@ -35,6 +35,7 @@
 		499A46F229DB08AA00C5EC70 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F129DB08AA00C5EC70 /* MatchListView.swift */; };
 		499A46F429DB0AEF00C5EC70 /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F329DB0AEF00C5EC70 /* PlayersViewModel.swift */; };
 		499A46F629DB0B2600C5EC70 /* OpponentPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F529DB0B2600C5EC70 /* OpponentPlayersView.swift */; };
+		499A46F829DB0BFB00C5EC70 /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F729DB0BFB00C5EC70 /* MatchDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		499A46F129DB08AA00C5EC70 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
 		499A46F329DB0AEF00C5EC70 /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
 		499A46F529DB0B2600C5EC70 /* OpponentPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentPlayersView.swift; sourceTree = "<group>"; };
+		499A46F729DB0BFB00C5EC70 /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,8 @@
 				499A46ED29DB079200C5EC70 /* TeamView.swift */,
 				499A46EF29DB081B00C5EC70 /* MatchCardView.swift */,
 				499A46F129DB08AA00C5EC70 /* MatchListView.swift */,
+				499A46F729DB0BFB00C5EC70 /* MatchDetailView.swift */,
+				499A46F529DB0B2600C5EC70 /* OpponentPlayersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,7 +229,6 @@
 				499A46E929DB066E00C5EC70 /* MatchViewModel.swift */,
 				499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */,
 				499A46F329DB0AEF00C5EC70 /* PlayersViewModel.swift */,
-				499A46F529DB0B2600C5EC70 /* OpponentPlayersView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				499A46CC29DB01AA00C5EC70 /* Serie.swift in Sources */,
 				499A46EE29DB079200C5EC70 /* TeamView.swift in Sources */,
 				499A46DB29DB035200C5EC70 /* ServiceError.swift in Sources */,
+				499A46F829DB0BFB00C5EC70 /* MatchDetailView.swift in Sources */,
 				499A46CE29DB01C400C5EC70 /* League.swift in Sources */,
 				499A468729DA757600C5EC70 /* CSTViOSApp.swift in Sources */,
 				499A46D929DB032C00C5EC70 /* ServiceProtocol.swift in Sources */,

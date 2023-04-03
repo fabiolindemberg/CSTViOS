@@ -11,6 +11,7 @@ import Foundation
     private var allMatches: [Match] = []
     private var fetchTask: Task<Void, Never>?
     private var service: ServiceProtocol?
+    var playersViewModel: PlayersViewModel?
     @Published var matches: [Match] = []
     @Published var loading = false
     @Published var showDetailView = false
@@ -61,5 +62,16 @@ import Foundation
             self.matches = self.allMatches
             self.loading = false
         }
+    }
+    
+    
+    func select(match: Match) {
+        if self.playersViewModel == nil {
+            self.playersViewModel = PlayersViewModel(service: Service(), match: match)
+        } else if self.playersViewModel?.match.id != match.id {
+            playersViewModel?.match = match
+        }
+        
+        self.showDetailView = true
     }
 }

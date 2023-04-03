@@ -1,5 +1,5 @@
 //
-//  MatchDetailView.swift
+//  MatchListView.swift
 //  CSTViOS
 //
 //  Created by Fabio Lindemberg on 03/04/23.
@@ -14,7 +14,14 @@ struct MatchListView: View {
         VStack {
             if !viewModel.loading {
                 List($viewModel.matches) { $match in
-                    MatchCardView(match: $match)
+                    MatchCardView(match: $match, onClick: {
+                        viewModel.select(match: match)
+                    })
+                    .navigationDestination(isPresented: $viewModel.showDetailView, destination: {
+                        if let playersViewModel = viewModel.playersViewModel {
+                            MatchDetailView(viewModel: playersViewModel)
+                        }
+                    })
                     .listRowBackground(Color("primary-background"))
                     .listRowSeparator(.hidden)
                 }
