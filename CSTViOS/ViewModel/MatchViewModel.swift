@@ -8,10 +8,18 @@
 import Foundation
 
 @MainActor class MatchViewModel: ObservableObject, ViewModelProtocol {
-    private var allMatches: [Match] = []
     private var fetchTask: Task<Void, Never>?
     private var service: ServiceProtocol?
+    private var page = 1
+    private var perPage = 10
+    private var pagesHasEnded = false
     var playersViewModel: PlayersViewModel?
+    var loadingFirstPage: Bool {
+        loading && page == 1
+    }
+    var loadingMore: Bool {
+        loading && page > 1
+    }
     @Published var matches: [Match] = []
     @Published var loading = false
     @Published var showDetailView = false
@@ -24,6 +32,38 @@ import Foundation
     
     init(service: ServiceProtocol) {
         self.service = service
+    }
+    
+    func loadMore() async {
+        guard !pagesHasEnded else {
+            return
+        }
+        
+        guard let service = service else {
+            return
+        }
+        
+        fetchTask?.cancel()
+        fetchTask = Task {
+            self.loading = true
+
+            let futureMatchesResult = await service.fetchFutureMatches(page, perPage: perPage)
+            
+            page += 1
+            
+            switch futureMatchesResult {
+            case .success(let futureMatches):
+                pagesHasEnded = futureMatches.count < perPage
+                matches += futureMatches
+                errorInfo = nil
+                break
+            case .failure(let error):
+                handle(error: error)
+                return
+            }
+            
+            self.loading = false
+        }
     }
     
     func fetch() async {
@@ -41,29 +81,18 @@ import Foundation
             self.loading = true
             
             let todaysMatchesResult = await service.fetchTodaysMatches()
-            let futureMatchesResult = await service.fetchFutureMatches()
             
             switch todaysMatchesResult {
             case .success(let todaysMatches):
-                allMatches = todaysMatches
+                matches = todaysMatches
+                await loadMore()
                 errorInfo = nil
                 break
             case .failure(let error):
                 handle(error: error)
                 return
             }
-            
-            switch futureMatchesResult {
-            case .success(let futureMatches):
-                allMatches += futureMatches
-                errorInfo = nil
-                break
-            case .failure(let error):
-                handle(error: error)
-                return
-            }
-            
-            self.matches = self.allMatches
+
             self.loading = false
         }
     }
@@ -76,5 +105,9 @@ import Foundation
         }
         
         self.showDetailView = true
+    }
+    
+    func isTheLast(match: Match) -> Bool {
+        match.id == matches.last?.id ?? 0
     }
 }
