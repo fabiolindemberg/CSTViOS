@@ -11,7 +11,7 @@ protocol ServiceProtocol: AnyObject {
     /// fetches today's matches that are running or already ended from api
     func fetchTodaysMatches() async -> Result<[Match], ServiceError>
     /// fetches futures matches from api
-    func fetchFutureMatches() async -> Result<[Match], ServiceError>
+    func fetchFutureMatches(_ page: Int, perPage: Int) async -> Result<[Match], ServiceError>
     /// Fatch players from a given match from API
     func fetchPlayers(matchId: Int) async -> Result<Opponents, ServiceError>
 }

@@ -12,7 +12,7 @@ struct MatchListView: View {
 
     var body: some View {
         VStack {
-            if !viewModel.loading {
+            if !viewModel.loadingFirstPage {
                 List($viewModel.matches) { $match in
                     MatchCardView(match: $match, onClick: {
                         viewModel.select(match: match)
@@ -24,10 +24,23 @@ struct MatchListView: View {
                     })
                     .listRowBackground(Color("primary-background"))
                     .listRowSeparator(.hidden)
+                    .onAppear {
+                        if viewModel.isTheLast(match: match) {
+                            Task {
+                                await viewModel.loadMoreMatches()
+                            }
+                        }
+                    }
                 }
                 .listStyle(.inset)
                 .scrollContentBackground (.hidden)
                 .background(Color("primary-background"))
+                
+                if viewModel.loadingMoreMatches {
+                    ProgressView()
+                        .scaleEffect(1.4125)
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                }
             } else {
                 ZStack {
                     Color("primary-background")
@@ -45,10 +58,10 @@ struct MatchListView: View {
         .navigationTitle(Constants.Views.matchesTitle)
         .navigationBarTitleDisplayMode(.large)
         .task {
-            await viewModel.fetch()
+            await viewModel.initialLoadMatches()
         }
         .refreshable {
-            await viewModel.fetch()
+            await viewModel.initialLoadMatches()
         }
     }
 }
