@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CachedAsyncImage
 
 struct OpponentPlayersView: View {
     @Binding var opponentPlayers: OpponentPlayers
@@ -32,21 +31,8 @@ struct OpponentPlayersView: View {
                             .foregroundColor(.white.opacity(0.5))
                     }
                     
-                    CachedAsyncImage(url: URL(string: opponentPlayers.playerTeamOne?.imageUrl ?? "")) { image in
-                        image
-                            .resizable()
-                            .frame(width: 55, height: 55)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .aspectRatio(0.6, contentMode: .fill)
-                    } placeholder: {
-                        Rectangle()
-                            .frame(width: 60, height: 60)
-                            .cornerRadius(10)
-                            .foregroundColor(Color("placeholder-background"))
-
-                    }
-                    .frame(width: 60, height: 60)
-                    
+                    PlayerImageView(url: URL(string: opponentPlayers.playerTeamOne?.imageUrl ?? ""),
+                              squareSize: 55)
                 }
                 .offset(x: -7, y: -8)
             }
@@ -59,20 +45,8 @@ struct OpponentPlayersView: View {
                     .frame(width: 200, height: 60)
                 HStack(alignment: .bottom) {
 
-                    CachedAsyncImage(url: URL(string: opponentPlayers.playerTeamTwo?.imageUrl ?? "")) { image in
-                        image
-                            .resizable()
-                            .frame(width: 55, height: 55)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .aspectRatio(0.6, contentMode: .fill)
-                    } placeholder: {
-                        Rectangle()
-                            .frame(width: 60, height: 60)
-                            .cornerRadius(10)
-                            .foregroundColor(Color("placeholder-background"))
-
-                    }
-                    .frame(width: 60, height: 60)
+                    PlayerImageView(url: URL(string: opponentPlayers.playerTeamOne?.imageUrl ?? ""),
+                              squareSize: 55)
 
                     VStack(alignment: .leading) {
                         Text(opponentPlayers.playerTeamTwo?.name ?? "N/A")

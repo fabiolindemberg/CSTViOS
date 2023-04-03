@@ -59,6 +59,7 @@
 		499A471329DB107300C5EC70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46DF29DB03A000C5EC70 /* Constants.swift */; };
 		499A471529DB110E00C5EC70 /* CSTVMatchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A471429DB110E00C5EC70 /* CSTVMatchViewModelTests.swift */; };
 		49F5DCB529DB250300E04C90 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 49F5DCB429DB250300E04C90 /* CachedAsyncImage */; };
+		49F5DCB729DB31D600E04C90 /* PlayerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5DCB629DB31D600E04C90 /* PlayerImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		499A470229DB0EBA00C5EC70 /* Data+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+decode.swift"; sourceTree = "<group>"; };
 		499A470529DB0F1200C5EC70 /* Date+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+utils.swift"; sourceTree = "<group>"; };
 		499A471429DB110E00C5EC70 /* CSTVMatchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVMatchViewModelTests.swift; sourceTree = "<group>"; };
+		49F5DCB629DB31D600E04C90 /* PlayerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 				499A46F529DB0B2600C5EC70 /* OpponentPlayersView.swift */,
 				499A46E429DB04D500C5EC70 /* SplashScreenView.swift */,
 				499A46ED29DB079200C5EC70 /* TeamView.swift */,
+				49F5DCB629DB31D600E04C90 /* PlayerImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				499A46F029DB081B00C5EC70 /* MatchCardView.swift in Sources */,
 				499A46D429DB024300C5EC70 /* OpponentPlayers.swift in Sources */,
 				499A470029DB0E4900C5EC70 /* JSONDecoder+customDecoder.swift in Sources */,
+				49F5DCB729DB31D600E04C90 /* PlayerImageView.swift in Sources */,
 				499A46DD29DB036C00C5EC70 /* Service.swift in Sources */,
 				499A46EC29DB069000C5EC70 /* ViewModelProtocol.swift in Sources */,
 				499A46CA29DB017B00C5EC70 /* Player.swift in Sources */,
