@@ -33,6 +33,7 @@
 		499A46EE29DB079200C5EC70 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46ED29DB079200C5EC70 /* TeamView.swift */; };
 		499A46F029DB081B00C5EC70 /* MatchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46EF29DB081B00C5EC70 /* MatchCardView.swift */; };
 		499A46F229DB08AA00C5EC70 /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F129DB08AA00C5EC70 /* MatchListView.swift */; };
+		499A46F429DB0AEF00C5EC70 /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A46F329DB0AEF00C5EC70 /* PlayersViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		499A46ED29DB079200C5EC70 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		499A46EF29DB081B00C5EC70 /* MatchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCardView.swift; sourceTree = "<group>"; };
 		499A46F129DB08AA00C5EC70 /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
+		499A46F329DB0AEF00C5EC70 /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				499A46E929DB066E00C5EC70 /* MatchViewModel.swift */,
 				499A46EB29DB069000C5EC70 /* ViewModelProtocol.swift */,
+				499A46F329DB0AEF00C5EC70 /* PlayersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				499A46D029DB01E300C5EC70 /* Team.swift in Sources */,
 				499A468929DA757600C5EC70 /* ContentView.swift in Sources */,
 				499A46E529DB04D500C5EC70 /* SplashScreenView.swift in Sources */,
+				499A46F429DB0AEF00C5EC70 /* PlayersViewModel.swift in Sources */,
 				499A46E729DB060500C5EC70 /* Mocks.swift in Sources */,
 				499A46D629DB028500C5EC70 /* Match.swift in Sources */,
 				499A46D229DB020400C5EC70 /* Opponent.swift in Sources */,
