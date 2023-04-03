@@ -8,7 +8,7 @@
 import Foundation
 
 class Service: ServiceProtocol {
-    func fetchFutureMatches() async -> Result<[Match], ServiceError> {
+    func fetchFutureMatches(_ page: Int = 1) async -> Result<[Match], ServiceError> {
         let stringUrl = Constants.API.baseUrl + Constants.API.EndPoint.matches
 
         guard let url = URL(string: stringUrl) else {
@@ -24,6 +24,8 @@ class Service: ServiceProtocol {
             .init(name: "filter[future]", value: "true"),
             .init(name: "filter[status]", value: "not_started"),
             .init(name: "sort", value: "begin_at"),
+            .init(name: "page", value: "\(page)"),
+            .init(name: "per_page", value: "10")
         ])
 
         do {

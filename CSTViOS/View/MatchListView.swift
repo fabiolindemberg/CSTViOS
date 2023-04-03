@@ -24,6 +24,17 @@ struct MatchListView: View {
                     })
                     .listRowBackground(Color("primary-background"))
                     .listRowSeparator(.hidden)
+                    
+                    if viewModel.loadingMore {
+                        HStack {
+                            Spacer()
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                            Spacer()
+                        }
+                        .listRowBackground(Color("primary-background"))
+                        .listRowSeparator(.hidden)
+                    }
                 }
                 .listStyle(.inset)
                 .scrollContentBackground (.hidden)
@@ -45,10 +56,10 @@ struct MatchListView: View {
         .navigationTitle(Constants.Views.matchesTitle)
         .navigationBarTitleDisplayMode(.large)
         .task {
-            await viewModel.fetch()
+            await viewModel.loadMatches()
         }
         .refreshable {
-            await viewModel.fetch()
+            await viewModel.loadMatches()
         }
     }
 }

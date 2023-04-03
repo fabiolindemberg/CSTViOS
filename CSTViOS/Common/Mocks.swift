@@ -151,7 +151,7 @@ class ServiceMockFailure: ServiceProtocol {
         return .failure(.parseError)
     }
     
-    func fetchFutureMatches() async -> Result<[Match], ServiceError> {
+    func fetchFutureMatches(_ page: Int) async -> Result<[Match], ServiceError> {
         return .failure(.parseError)
     }
     
@@ -168,7 +168,7 @@ class ServiceMockSuccess: ServiceProtocol {
     }
     
     /// mock a successful but empty matches data from static json string
-    func fetchFutureMatches() async -> Result<[Match], ServiceError> {
+    func fetchFutureMatches(_ page: Int) async -> Result<[Match], ServiceError> {
         return .success([])
     }
     

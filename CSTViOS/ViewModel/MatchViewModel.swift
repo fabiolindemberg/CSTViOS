@@ -11,9 +11,11 @@ import Foundation
     private var allMatches: [Match] = []
     private var fetchTask: Task<Void, Never>?
     private var service: ServiceProtocol?
+    private var page: Int = 1
     var playersViewModel: PlayersViewModel?
     @Published var matches: [Match] = []
     @Published var loading = false
+    @Published var loadingMore = false
     @Published var showDetailView = false
     @Published var presentErrorMessage: Bool = false
     var errorInfo: (title: String, message: String)? {
@@ -26,7 +28,7 @@ import Foundation
         self.service = service
     }
     
-    func fetch() async {
+    func loadMoreMatches() async {
         guard !showDetailView else {
             return
         }
@@ -35,13 +37,48 @@ import Foundation
             return
         }
         
+        if page > 1 {
+            fetchTask?.cancel()
+        }
+        
+        fetchTask = Task {
+            self.loadingMore = !loading
+            
+            let futureMatchesResult = await service.fetchFutureMatches(page)
+            
+            page += 1
+            
+            switch futureMatchesResult {
+            case .success(let futureMatches):
+                self.matches += futureMatches
+                errorInfo = nil
+                break
+            case .failure(let error):
+                handle(error: error)
+                return
+            }
+            
+            self.loadingMore = false
+        }
+    }
+    
+    func loadMatches() async {
+        guard !showDetailView else {
+            return
+        }
+        
+        guard let service = service else {
+            return
+        }
+        
+        page = 1
+        
         fetchTask?.cancel()
 
         fetchTask = Task {
             self.loading = true
             
             let todaysMatchesResult = await service.fetchTodaysMatches()
-            let futureMatchesResult = await service.fetchFutureMatches()
             
             switch todaysMatchesResult {
             case .success(let todaysMatches):
@@ -53,15 +90,8 @@ import Foundation
                 return
             }
             
-            switch futureMatchesResult {
-            case .success(let futureMatches):
-                allMatches += futureMatches
-                errorInfo = nil
-                break
-            case .failure(let error):
-                handle(error: error)
-                return
-            }
+            // load the firs page of futures matches
+            await loadMoreMatches()
             
             self.matches = self.allMatches
             self.loading = false
