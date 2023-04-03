@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct MatchCardView: View {
     @Binding var match: Match
@@ -42,7 +43,7 @@ struct MatchCardView: View {
                 .background(Color.white.opacity(0.5))
             
             HStack {
-                AsyncImage(url: match.league.imageUrl?.url) { image in
+                CachedAsyncImage(url: match.league.imageUrl?.url) { image in
                     image
                         .resizable()
                         .scaledToFit()

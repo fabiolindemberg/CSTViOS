@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct TeamView: View {
     var team: Team?
     
     var body: some View {
         VStack(alignment: .center) {
-            AsyncImage(url: URL(string: team?.imageUrl ?? "")) { image in
+            CachedAsyncImage(url: URL(string: team?.imageUrl ?? "")) { image in
                 image
                     .resizable()
                     .scaledToFit()

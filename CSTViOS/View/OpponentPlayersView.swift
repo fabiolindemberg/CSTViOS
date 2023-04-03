@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct OpponentPlayersView: View {
     @Binding var opponentPlayers: OpponentPlayers
@@ -31,7 +32,7 @@ struct OpponentPlayersView: View {
                             .foregroundColor(.white.opacity(0.5))
                     }
                     
-                    AsyncImage(url: URL(string: opponentPlayers.playerTeamOne?.imageUrl ?? "")) { image in
+                    CachedAsyncImage(url: URL(string: opponentPlayers.playerTeamOne?.imageUrl ?? "")) { image in
                         image
                             .resizable()
                             .frame(width: 55, height: 55)
@@ -58,7 +59,7 @@ struct OpponentPlayersView: View {
                     .frame(width: 200, height: 60)
                 HStack(alignment: .bottom) {
 
-                    AsyncImage(url: URL(string: opponentPlayers.playerTeamTwo?.imageUrl ?? "")) { image in
+                    CachedAsyncImage(url: URL(string: opponentPlayers.playerTeamTwo?.imageUrl ?? "")) { image in
                         image
                             .resizable()
                             .frame(width: 55, height: 55)
